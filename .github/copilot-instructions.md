@@ -1,0 +1,4 @@
+- [x] Clarify Project Requirements
+  - Indie-style old-fashioned personal blog website using plain HTML, CSS, and minimal JavaScript. Retro design, handwritten font, pastel background, sidebar navigation. Homepage, about page, blog page with posts as separate HTML files.
+- [x] Scaffold the Project
+  - Project folders and files will be created next.

@@ -1,0 +1,307 @@
+.sub-header {
+  text-align: center;
+  color: #93a1a1;
+  font-size: 1em;
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+  margin: 16px 0 8px 0;
+  padding: 8px 0;
+  border-top: 2px dotted #586e75;
+  border-bottom: 2px dotted #586e75;
+  background: transparent;
+}
+/* Retro navigation bar styles */
+.retro-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background: #b0c4b1;
+  border-bottom: 2px solid #b08a5a;
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+.retro-nav a {
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+  color: #e75480;
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #b08a5a;
+  background: #f4f1ed;
+  box-shadow: 1px 1px 0 #b08a5a;
+  transition: background 0.2s, color 0.2s;
+}
+.retro-nav a:hover {
+  background: #e75480;
+  color: #fffaf6;
+}
+/* === Retro Indie Blog Theme === */
+
+/* Color Palette */
+/* Solarized Dark Theme */
+:root {
+  --bg: #002b36;
+  --main-text: #839496;
+  --accent-blue: #268bd2;
+  --sidebar-bg: #073642;
+  --sidebar-border: #586e75;
+  --header-bg: #073642;
+  --link-hover: #586e75;
+}
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+  background: var(--bg);
+  color: var(--main-text);
+  min-height: 100vh;
+}
+.bg-tile {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  background: url('assets/paper-bg.png') repeat;
+  opacity: 0.25;
+}
+/* Main two-column layout */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--sidebar-bg);
+  box-shadow: 0 0 24px var(--sidebar-border);
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+.main-layout {
+/* Removed old layout, replaced by grid below */
+}
+aside {
+  flex: 1;
+}
+main {
+  flex: 3;
+}
+}
+.main-layout {
+/* Removed old layout, replaced by grid below */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+#left-sidebar, #right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.sidebar-box {
+  background: #3a2a3d;
+  border: 1px solid #ff79c6;
+  border-radius: 8px;
+  padding: 18px 14px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px #1a101a;
+}
+.main-box {
+  background: #3a2a3d;
+  border: 1px solid #ff79c6;
+  border-radius: 8px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 8px #1a101a;
+  color: #f8e1f4;
+}
+}
+aside {
+  flex: 1;
+}
+main {
+  flex: 3;
+}
+}
+.header-banner {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: var(--header-bg);
+  color: var(--accent-pink);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 12px #b8a99a;
+  padding: 16px 0 0 0;
+}
+.ascii-art {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7em;
+  color: var(--main-text);
+  margin: 0;
+}
+.marquee {
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+  color: var(--accent-pink);
+  background: #f4f1ed;
+  font-size: 0.8em;
+  padding: 2px 0;
+}
+.blink {
+  animation: blink 1s steps(2, start) infinite;
+  color: var(--accent-pink);
+  font-weight: bold;
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+}
+.sidebar {
+  background: var(--sidebar-bg);
+  width: 180px;
+  min-width: 140px;
+  padding: 30px 10px;
+  box-shadow: 2px 0 8px var(--sidebar-border);
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+  border-right: 2px dotted var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidebar h2 {
+  font-size: 1em;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  color: #6e5c4b;
+  border-bottom: 1px dotted var(--sidebar-border);
+  width: 100%;
+}
+.sidebar nav a {
+  display: block;
+  margin: 8px 0;
+  text-decoration: none;
+  color: var(--main-text);
+  font-size: 0.9em;
+  transition: color 0.2s;
+  padding: 2px 0;
+}
+.sidebar nav a:hover {
+  color: var(--accent-pink);
+  background: #f4f1ed;
+}
+.sidebar ul {
+  margin: 12px 0 0 0;
+  padding: 0 0 0 18px;
+}
+.sidebar ul li {
+  margin-bottom: 6px;
+}
+.hit-counter {
+  margin-top: 24px;
+  font-size: 0.8em;
+  color: #93a1a1;
+  background: #073642;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #93a1a1;
+}
+.main-column {
+  flex: 1;
+  padding: 40px 24px;
+  background: #073642;
+  min-height: 100vh;
+  box-shadow: 0 0 12px #002b36 inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #93a1a1;
+}
+h1, h2, h3, h4, h5, h6, p, a, ul, li, .ascii-art, .marquee, .blink {
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace !important;
+}
+h1 {
+  font-size: 1.5em;
+  color: #7c6f57;
+  text-align: center;
+  margin-top: 0;
+}
+.post h2 {
+  font-size: 1em;
+  color: var(--accent-pink);
+  margin-bottom: 8px;
+}
+/* Retro link colors */
+/* Retro link colors - Solarized update */
+a:link {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+a:visited {
+  color: #6c71c4;
+}
+a:hover {
+  color: var(--main-text);
+  background: var(--link-hover);
+}
+p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: var(--main-text);
+}
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+footer {
+  width: 100%;
+  background: #002b36;
+  color: #93a1a1;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 16px 0 24px 0;
+  border-top: 2px dotted #586e75;
+  margin-top: 32px;
+}
+footer img {
+  vertical-align: middle;
+  margin-left: 12px;
+}
+footer .buttons {
+  margin-top: 12px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Mobile styles */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    max-width: 98vw;
+    margin: 10px auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .header-banner {
+    position: static;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 8px 0 0 0;
+  }
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-bottom: 2px dotted var(--sidebar-border);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+  .main-column {
+    padding: 20px 4vw;
+    min-height: 60vh;
+    box-shadow: none;
+  }
+  footer {
+    font-size: 0.7em;
+    padding: 8px 0 16px 0;
+  }
+}

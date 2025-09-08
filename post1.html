@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Post</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-tile"></div>
+  <header class="header-banner">
+    <pre class="ascii-art">
+  __  __       _         _     _           _     _           
+ |  \/  | __ _| | _____ | |__ (_)_ __ ___ | |__ (_)_ __  ___ 
+ | |\/| |/ _` | |/ / _ \| '_ \| | '_ ` _ \| '_ \| | '_ \/ __|
+ | |  | | (_| |   < (_) | |_) | | | | | | | |_) | | | | \__ \
+ |_|  |_|\__,_|_|\_\___/|_.__/|_|_| |_| |_|_.__/|_|_| |_|___/
+    </pre>
+    <marquee behavior="scroll" direction="left" class="marquee">Welcome to my retro indie blog! <span class="blink">NEW POST</span></marquee>
+  </header>
+  <div class="main-layout">
+    <aside class="sidebar">
+      <h2>Blogroll</h2>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <ul>
+        <li><a href="#">Cool Indie Blog</a></li>
+        <li><a href="#">Webring</a></li>
+        <li><a href="#">Guestbook</a></li>
+        <li><a href="#">Pixel Art Gallery</a></li>
+        <li><a href="#">Old School Forum</a></li>
+      </ul>
+      <div class="clock" id="clock" style="margin:12px 0;color:#93a1a1;font-family:'Press Start 2P',monospace;font-size:0.9em;"></div>
+      <div class="hit-counter">
+        <span>Hits:</span> <span id="counter">00123</span>
+      </div>
+    </aside>
+    <main class="main-column">
+      <h1>My First Post <span class="blink">★</span></h1>
+      <p>Date: September 6, 2025</p>
+      <p>Welcome to my first blog post! This is where my story begins. I'm excited to share my journey, thoughts, and retro web finds with you.</p>
+      <p>This blog is hand-coded in true indie style, inspired by the classic web of the 90s and early 2000s. Expect pixel art, ASCII banners, and lots of nostalgia!</p>
+      <p>Stay tuned for more posts about coding, design, and my favorite vintage websites.</p>
+      <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </main>
+  </div>
+  <footer>
+    <marquee behavior="scroll" direction="left" class="marquee">*** Welcome to my corner of the web! ***</marquee><br>
+    &copy; 2025 Your Name Here &mdash; Made with <span style="color:#e75480">♥</span> &mdash; Last updated on: September 8, 2025
+    <img src="assets/under-construction.gif" alt="Under Construction" width="32" height="32">
+    <div class="buttons">
+      <img src="assets/button-netscape.gif" alt="Netscape Now!" width="88" height="31">
+      <img src="assets/button-notepad.gif" alt="Made with Notepad" width="88" height="31">
+    </div>
+  </footer>
+  <script>
+    // Dynamic Visitor Counter
+    let counter = document.getElementById('counter');
+    let hits = 123;
+    setInterval(function() {
+      hits++;
+      counter.textContent = hits.toString().padStart(5, '0');
+    }, 3000);
+    // Live Clock
+    function updateClock() {
+      const now = new Date();
+      let h = String(now.getHours()).padStart(2, '0');
+      let m = String(now.getMinutes()).padStart(2, '0');
+      let s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = h + ':' + m + ':' + s;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>

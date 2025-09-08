@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Post - Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: #eee;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 16px;
+      padding: 20px;
+      background-image: linear-gradient(45deg, #16213e 25%, transparent 25%), linear-gradient(-45deg, #16213e 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #16213e 75%), linear-gradient(-45deg, transparent 75%, #16213e 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #0f3460;
+      border: 3px solid #16a085;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(22, 160, 133, 0.3);
+    }
+    h1 {
+      text-align: center;
+      color: #16a085;
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 0px #000;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      color: #e74c3c;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      background-color: #1a365d;
+      border: 2px solid #16a085;
+      border-radius: 5px;
+      padding: 10px;
+      color: #ecf0f1;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 11px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 200px;
+      resize: vertical;
+    }
+    .btn {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #c0392b;
+    }
+    .btn-primary {
+      background-color: #16a085;
+    }
+    .btn-primary:hover {
+      background-color: #1abc9c;
+    }
+    .nav-back {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .nav-back a {
+      background-color: #16a085;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background-color 0.3s;
+      font-size: 12px;
+    }
+    .nav-back a:hover {
+      background-color: #1abc9c;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>✏️ Create New Post</h1>
+    
+    <form method="POST">
+      <div class="form-group">
+        <label for="title">Post Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="slug">URL Slug (no spaces, lowercase):</label>
+        <input type="text" id="slug" name="slug" required placeholder="my-awesome-post">
+      </div>
+      
+      <div class="form-group">
+        <label for="excerpt">Short Excerpt:</label>
+        <textarea id="excerpt" name="excerpt" required placeholder="A brief summary of your post..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="content">Full Content:</label>
+        <textarea id="content" name="content" required placeholder="Write your full blog post here..."></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">📝 Publish Post</button>
+    </form>
+    
+    <div class="nav-back">
+      <a href="{{ url_for('admin') }}">← Back to Admin</a>
+    </div>
+  </div>
+</body>
+</html>

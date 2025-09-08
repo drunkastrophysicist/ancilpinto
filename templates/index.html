@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Y2K Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+  <style>
+    /* --- Color Scheme & Background --- */
+    body {
+      background-color: #2a212c; /* Dark purple background */
+      color: #fce5f2;           /* Light pink/white text */
+      font-family: 'Press Start 2P', monospace;
+      font-size: 18px;
+      padding: 15px;
+      background-image: url("{{ url_for('static', filename='assets/starfield-bg.png') }}");
+      background-repeat: repeat;
+      cursor: url("{{ url_for('static', filename='assets/pixel-heart-cursor.cur') }}"), auto;
+    }
+
+    /* --- Three-Column Layout --- */
+    .main-container {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr 1fr; /* Sets up the 3 columns */
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto; /* Center the layout */
+    }
+
+    /* --- Styling for the Content "Widgets" --- */
+    .widget {
+      background-color: #3e3046; /* Slightly lighter purple for boxes */
+      border: 2px solid #ff79c6; /* Pink border */
+      padding: 10px 20px;
+    }
+
+    h2 {
+      color: #ff79c6; /* Pink headers */
+      border-bottom: 2px solid #ff79c6;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+    .widget h2 {
+      background-color: #ff79c6;
+      color: #2a212c;
+      border-bottom: 2px solid #ff79c6;
+      padding: 8px 0 5px 0;
+      text-align: center;
+      border-radius: 6px 6px 0 0;
+      margin: -10px -20px 10px -20px;
+    }
+
+    a {
+      color: #f7b2e0;
+      text-decoration: none;
+      transition: color 0.2s, background-color 0.2s;
+    }
+    a:hover {
+      color: #ffffff;
+      background-color: #5a4863;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;margin-bottom:18px;"><img src="{{ url_for('static', filename='assets/makobinbins-banner.png') }}" alt="Makobinbins Banner" style="max-width:100%;height:auto;"></h1>
+  <div class="main-container">
+
+    <aside id="left-sidebar" class="widget">
+      <h2>Blogroll</h2>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('resume') }}">Resume</a></li>
+        <li><a href="{{ url_for('admin') }}">Admin</a></li>
+      </ul>
+    </aside>
+
+    <main id="main-content" class="widget">
+      <h2>Welcome to My Life Blog <img src="{{ url_for('static', filename='assets/sparkle.gif') }}" alt="Sparkle" style="height:18px;vertical-align:middle;"></h2>
+      <p>This is my personal space to share stories, thoughts, and memories. Enjoy the retro vibes!</p>
+      
+      {% for post in posts %}
+      <div class="post">
+        <h3><a href="{{ url_for('post_detail', slug=post.slug) }}">{{ post.title }} {% if loop.first %}<span class="blink">★</span>{% endif %}</a> <img src="{{ url_for('static', filename='assets/sparkle.gif') }}" alt="Sparkle" style="height:16px;vertical-align:middle;"></h3>
+        <p>{{ post.excerpt }}</p>
+        <p><small>Posted on {{ post.date_created[:10] }}</small></p>
+        <img src="{{ url_for('static', filename='assets/pixel-divider.png') }}" alt="Pixel Divider" style="width:100%;margin:12px 0;">
+      </div>
+      {% endfor %}
+    </main>
+
+    <aside id="right-sidebar" class="widget">
+      <div class="widget">
+        <h2>Stats</h2>
+        <div class="hit-counter">
+          <span>Hits:</span> <span id="counter">00123</span>
+        </div>
+        <div class="clock" id="clock"></div>
+      </div>
+      <div class="widget">
+        <h2>My Status</h2>
+        <p>Feeling Y2K! Building my retro blog with Flask backend!</p>
+      </div>
+      <div class="widget">
+        <h2>About Me</h2>
+        <p>tech enthusiast, exploring new ideas and learning things</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    // Dynamic Visitor Counter
+    let counter = document.getElementById('counter');
+    let hits = 123;
+    setInterval(function() {
+      hits++;
+      counter.textContent = hits.toString().padStart(5, '0');
+    }, 3000);
+    // Live Clock
+    function updateClock() {
+      const now = new Date();
+      let h = String(now.getHours()).padStart(2, '0');
+      let m = String(now.getMinutes()).padStart(2, '0');
+      let s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = h + ':' + m + ':' + s;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+</html>

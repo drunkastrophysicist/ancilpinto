@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume - Ancil Pinto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: #eee;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 16px;
+      padding: 20px;
+      background-image: linear-gradient(45deg, #16213e 25%, transparent 25%), linear-gradient(-45deg, #16213e 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #16213e 75%), linear-gradient(-45deg, transparent 75%, #16213e 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #0f3460;
+      border: 3px solid #16a085;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(22, 160, 133, 0.3);
+    }
+    h1 {
+      text-align: center;
+      color: #16a085;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0px #000;
+    }
+    .contact-info {
+      text-align: center;
+      color: #ecf0f1;
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #e74c3c;
+      border-left: 4px solid #e74c3c;
+      padding-left: 15px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .section {
+      background-color: #1a365d;
+      border: 2px solid #16a085;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .skill-item, .experience-item {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #2d4a5c;
+    }
+    .skill-item:last-child, .experience-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .job-title {
+      color: #16a085;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .job-company {
+      color: #e74c3c;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .job-description {
+      color: #ecf0f1;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .skill-category {
+      color: #16a085;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .skill-list {
+      color: #ecf0f1;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .highlight {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .nav-back {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .nav-back a {
+      background-color: #16a085;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .nav-back a:hover {
+      background-color: #1abc9c;
+    }
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, #e74c3c, #16a085, #e74c3c);
+      margin: 25px 0;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <h1>💼 Ancil Pinto</h1>
+    <div class="contact-info">
+      CS Student | India | Tech Enthusiast<br>
+      📧 ancil@example.com | 🌐 makobinbins.dev
+    </div>
+    
+    <div class="section">
+      <h2>🎯 About</h2>
+      <p style="color: #ecf0f1; line-height: 1.6; font-size: 12px;">
+        18-year-old Computer Science student passionate about web development, astronomy, and technology. 
+        Love building projects and exploring new ideas in the tech space.
+      </p>
+    </div>
+    
+    <div class="section">
+      <h2>🛠️ Skills</h2>
+      <div class="skill-item">
+        <div class="skill-category">Programming Languages</div>
+        <div class="skill-list">Python, JavaScript, HTML/CSS, Java</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-category">Web Technologies</div>
+        <div class="skill-list">HTML5, CSS3, JavaScript, Responsive Design, Flask</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-category">Tools & Technologies</div>
+        <div class="skill-list">Git, VS Code, Linux, Command Line, SQLite</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-category">Interests</div>
+        <div class="skill-list">Chess, Writing, Astronomy, Retro Web Design</div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>🎓 Education</h2>
+      <div class="experience-item">
+        <div class="job-title">Computer Science Student</div>
+        <div class="job-company">University in India | 2024 - Present</div>
+        <div class="job-description">
+          Currently pursuing Computer Science degree with focus on web development and software engineering.
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>🚀 Projects</h2>
+      <div class="experience-item">
+        <div class="job-title">Personal Retro Blog with Backend</div>
+        <div class="job-company">2025 | HTML, CSS, JavaScript, Python Flask, SQLite</div>
+        <div class="job-description">
+          Hand-coded personal blog with Y2K aesthetic, featuring custom pixel art, retro design elements, and a dynamic Flask backend with database integration.
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="job-title">Web Development Projects</div>
+        <div class="job-company">Ongoing | Various Technologies</div>
+        <div class="job-description">
+          Building various web projects to explore different technologies and improve coding skills.
+        </div>
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="nav-back">
+      <a href="{{ url_for('index') }}">← Return to Homepage</a>
+    </div>
+  </div>
+</body>
+</html>

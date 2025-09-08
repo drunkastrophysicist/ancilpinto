@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Ancil Pinto - My Personal Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: #eee;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 16px;
+      padding: 20px;
+      background-image: linear-gradient(45deg, #16213e 25%, transparent 25%), linear-gradient(-45deg, #16213e 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #16213e 75%), linear-gradient(-45deg, transparent 75%, #16213e 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+    .about-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #0f3460;
+      border: 3px solid #16a085;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(22, 160, 133, 0.3);
+    }
+    h1 {
+      text-align: center;
+      color: #16a085;
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 0px #000;
+    }
+    h2 {
+      color: #e74c3c;
+      border-left: 4px solid #e74c3c;
+      padding-left: 15px;
+      margin-top: 25px;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #ecf0f1;
+    }
+    .highlight {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .nav-back {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .nav-back a {
+      background-color: #16a085;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .nav-back a:hover {
+      background-color: #1abc9c;
+    }
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, #e74c3c, #16a085, #e74c3c);
+      margin: 25px 0;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    <h1>🚀 About Ancil Pinto</h1>
+    
+    <h2>👋 Hello World!</h2>
+    <p>Hii! My name is <span class="highlight">Ancil Pinto</span> (he/him), and I'm a <span class="highlight">18-year-old CS student</span> from India! I am big fan of the web. This site is my appreciation for the old web!</p>
+    
+    <div class="divider"></div>
+    
+    <h2>🎯 What I Do</h2>
+    <p>I also play <span class="highlight">chess</span>, <span class="highlight">write</span>, <span class="highlight">build stuff</span>, and do a bunch of other things that you might find on here!</p>
+    
+    <div class="divider"></div>
+    
+    <h2>🌟 My Passions</h2>
+    <p>I love <span class="highlight">astronomy</span> and regularly get obsessed with certain pieces of tech- you will see them around here.</p>
+    
+    <div class="divider"></div>
+    
+    <h2>🌐 This Website</h2>
+    <p>This is my personal corner of the web where I share my thoughts, projects, and discoveries. Welcome to my retro-styled blog!</p>
+    
+    <div class="nav-back">
+      <a href="{{ url_for('index') }}">← Return to Homepage</a>
+    </div>
+  </div>
+</body>
+</html>
