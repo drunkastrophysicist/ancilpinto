@@ -14,26 +14,26 @@
   display: flex;
   justify-content: center;
   gap: 32px;
-  background: #b0c4b1;
-  border-bottom: 2px solid #b08a5a;
+  background: #0f3460;
+  border-bottom: 2px solid #16a085;
   padding: 8px 0;
   margin-bottom: 8px;
 }
 .retro-nav a {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-  color: #e75480;
+  color: #eee;
   text-decoration: none;
   font-size: 0.8em;
   padding: 2px 8px;
   border-radius: 4px;
-  border: 1px solid #b08a5a;
-  background: #f4f1ed;
-  box-shadow: 1px 1px 0 #b08a5a;
+  border: 1px solid #16a085;
+  background: #1a1a2e;
+  box-shadow: 1px 1px 0 #16a085;
   transition: background 0.2s, color 0.2s;
 }
 .retro-nav a:hover {
-  background: #e75480;
-  color: #fffaf6;
+  background: #16a085;
+  color: #1a1a2e;
 }
 /* === Retro Indie Blog Theme === */
 

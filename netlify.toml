@@ -1,12 +1,18 @@
-# Netlify deployment configuration
+# Netlify deployment configuration for static site generated from Flask
 [build]
-  command = "pip install -r requirements.txt"
-  publish = "."
+  command = "pip install -r requirements.txt && python build_static.py"
+  publish = "dist"
 
 [build.environment]
   PYTHON_VERSION = "3.11"
 
+# Handle client-side routing for single page app behavior  
+[[redirects]]
+  from = "/post/*"
+  to = "/post/:splat.html"
+  status = 200
+
 [[redirects]]
   from = "/*"
-  to = "/app.py"
-  status = 200
+  to = "/index.html"
+  status = 404
