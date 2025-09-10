@@ -1,22 +1,8 @@
 {
+  "buildCommand": "echo 'Using pre-built static files'",
+  "outputDirectory": "dist",
+  "installCommand": "echo 'No dependencies needed'",
+  "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "public": false,
-  "github": {
-    "silent": true
-  },
-  "rewrites": [
-    {
-      "source": "/post/(.*)",
-      "destination": "/dist/post/$1.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/dist/$1.html"
-    },
-    {
-      "source": "/",
-      "destination": "/dist/index.html"
-    }
-  ]
+  "trailingSlash": false
 }
