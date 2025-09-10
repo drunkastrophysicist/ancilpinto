@@ -3,6 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:  # Allow manual trigger
 
 permissions:
   contents: read
@@ -35,6 +36,8 @@ jobs:
     
     - name: Setup Pages
       uses: actions/configure-pages@v4
+      with:
+        enablement: true  # Force enable Pages
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
