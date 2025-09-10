@@ -1,5 +1,22 @@
 {
-  "buildCommand": "python build_static.py",
-  "outputDirectory": "dist",
-  "installCommand": "pip install -r requirements.txt"
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "public": false,
+  "github": {
+    "silent": true
+  },
+  "rewrites": [
+    {
+      "source": "/post/(.*)",
+      "destination": "/dist/post/$1.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/dist/$1.html"
+    },
+    {
+      "source": "/",
+      "destination": "/dist/index.html"
+    }
+  ]
 }
