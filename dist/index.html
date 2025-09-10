@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 makobinbins - my retro blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico">
+  <style>
+    /* --- Color Scheme & Background --- */
+    body {
+      background-color: #1a1a2e;
+      color: #eee;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 16px;
+      padding: 20px;
+      background-image: linear-gradient(45deg, #16213e 25%, transparent 25%), linear-gradient(-45deg, #16213e 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #16213e 75%), linear-gradient(-45deg, transparent 75%, #16213e 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+
+    /* --- Three-Column Layout --- */
+    .main-container {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr 1fr; /* Sets up the 3 columns */
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto; /* Center the layout */
+    }
+
+    /* --- Styling for the Content "Widgets" --- */
+    .widget {
+      background-color: #0f3460; /* Blue background to match other pages */
+      border: 2px solid #16a085; /* Teal border to match other pages */
+      padding: 10px 20px;
+    }
+
+    h2 {
+      color: #16a085; /* Teal headers */
+      border-bottom: 2px solid #16a085;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+    .widget h2 {
+      background-color: #16a085;
+      color: #1a1a2e;
+      border-bottom: 2px solid #16a085;
+      padding: 8px 0 5px 0;
+      text-align: center;
+      border-radius: 6px 6px 0 0;
+      margin: -10px -20px 10px -20px;
+    }
+
+    a {
+      color: #16a085;
+      text-decoration: none;
+      transition: color 0.2s, background-color 0.2s;
+    }
+    a:hover {
+      color: #eee;
+      background-color: #16a085;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* --- Post Card Hover Effects --- */
+    .post-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(22, 160, 133, 0.4);
+      border-color: #16a085;
+    }
+
+    .post-card a:hover {
+      color: #16a085;
+      background-color: transparent;
+    }
+
+    .main-header:hover {
+      transform: scale(1.01);
+      transition: transform 0.3s ease;
+    }
+
+    /* --- Improved Sparkle Animation --- */
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.1); }
+    }
+
+    img[alt="Sparkle"] {
+      animation: sparkle 2s infinite;
+    }
+
+    /* --- Enhanced Blink Effect --- */
+    .blink {
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;margin-bottom:18px;">🌸 <img src="/static/assets/makobinbins-banner.png" alt="makobinbins" style="max-width:100%;height:auto;"> 🌸</h1>
+  <div class="main-container">
+
+    <aside id="left-sidebar" class="widget">
+      <h2>Blogroll</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/resume">Resume</a></li>
+        
+      </ul>
+    </aside>
+
+        <main id="main-content" class="widget">
+      <div class="main-header" style="text-align: center; margin-bottom: 25px; padding: 20px; background: linear-gradient(135deg, #16a08515, #0f346015); border-radius: 15px; border: 2px solid #16a085;">
+        <h2 style="margin: 0 0 10px 0; color: #eee; text-shadow: 1px 1px 0px #000;">🌸 Welcome to My Blog</h2>
+        <p style="margin: 0; color: #ccc; font-size: 13px; line-height: 1.4;">This is my personal space to share stories, thoughts, and memories. Enjoy the retro vibes!</p>
+      </div>
+      
+      
+      <div class="posts-section">
+        <h3 style="color: #16a085; margin-bottom: 20px; font-size: 16px; border-left: 4px solid #16a085; padding-left: 15px;">📝 Latest Posts</h3>
+        
+        <div class="post-card" style="background: linear-gradient(135deg, #1a365d, #0f3460); border: 2px solid #16a085; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(22, 160, 133, 0.2); transition: transform 0.2s ease;">
+          <div class="post-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="margin: 0; font-size: 16px;">
+              <a href="/post/first-blog-post" style="color: #16a085; text-decoration: none; transition: color 0.3s ease;">"
+                Hello! 
+                <span class="blink" style="color: #16a085;">★</span>
+              </a>
+            </h3>
+            <img src="/static/assets/sparkle.gif" alt="Sparkle" style="height:16px;">
+          </div>
+          <p style="margin: 0 0 12px 0; color: #ccc; line-height: 1.5; font-size: 13px;">summary of today</p>
+          <div class="post-meta" style="display: flex; justify-content: space-between; align-items: center;">
+            <small style="color: #16a085; font-size: 11px; background: #16a08520; padding: 4px 8px; border-radius: 8px;">📅 2025-09-08</small>
+            <a href="/post/first-blog-post" style="color: #16a085; text-decoration: none; font-size: 11px; font-weight: bold;">Read More →</a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </main>
+
+    <aside id="right-sidebar" class="widget">
+      
+      <div class="widget">
+        <h2>My Status</h2>
+        <div style="background: linear-gradient(45deg, #16a08530, #0f346030); border: 2px solid #16a085; border-radius: 8px; padding: 12px; margin-bottom: 12px; font-size: 11px;">
+          <p style="margin: 0 0 8px 0; color: #eee; font-weight: bold; line-height: 1.4;">huhuuuu</p>
+          <small style="color: #16a085; font-size: 9px; background: rgba(22, 160, 133, 0.2); padding: 2px 6px; border-radius: 4px;">2025-09-08 20:18</small>
+        </div>
+      </div>
+      
+      <div class="widget">
+        <h2>Stats</h2>
+        <div class="hit-counter">
+          <span>Hits:</span> <span id="counter">00123</span>
+        </div>
+        <div class="clock" id="clock"></div>
+      </div>
+      <div class="widget">
+        <h2>About Me</h2>
+        <p>tech enthusiast, exploring new ideas and learning things</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    // Dynamic Visitor Counter (more realistic starting number)
+    let counter = document.getElementById('counter');
+    let hits = 1247; // More realistic hit count
+    setInterval(function() {
+      hits++;
+      counter.textContent = hits.toString().padStart(5, '0');
+    }, 15000); // Slower increment - every 15 seconds
+    
+    // Live Clock - Asia/Kolkata timezone
+    function updateClock() {
+      const now = new Date();
+      // Convert to Asia/Kolkata timezone (UTC+5:30)
+      const kolkataTime = new Date(now.toLocaleString("en-US", {timeZone: "Asia/Kolkata"}));
+      let h = String(kolkataTime.getHours()).padStart(2, '0');
+      let m = String(kolkataTime.getMinutes()).padStart(2, '0');
+      let s = String(kolkataTime.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = h + ':' + m + ':' + s;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+</html>

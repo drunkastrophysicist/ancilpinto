@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📝 Blog - makobinbins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico">
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: #eee;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 16px;
+      padding: 20px;
+      background-image: linear-gradient(45deg, #16213e 25%, transparent 25%), linear-gradient(-45deg, #16213e 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #16213e 75%), linear-gradient(-45deg, transparent 75%, #16213e 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+    .blog-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #0f3460;
+      border: 3px solid #16a085;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(22, 160, 133, 0.3);
+    }
+    h1 {
+      text-align: center;
+      color: #16a085;
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 0px #000;
+    }
+    .blog-post {
+      background-color: #1a365d;
+      border: 2px solid #16a085;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      transition: transform 0.2s;
+    }
+    .blog-post:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(22, 160, 133, 0.2);
+    }
+    .post-title {
+      color: #16a085;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .post-date {
+      color: #e74c3c;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+    .post-excerpt {
+      color: #ecf0f1;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .read-more {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      font-size: 12px;
+      transition: background-color 0.3s;
+    }
+    .read-more:hover {
+      background-color: #c0392b;
+    }
+    .nav-back {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .nav-back a {
+      background-color: #16a085;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .nav-back a:hover {
+      background-color: #1abc9c;
+    }
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, #e74c3c, #16a085, #e74c3c);
+      margin: 25px 0;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <h1>📝 My Blog Posts</h1>
+    
+    
+    <div class="blog-post">
+      <div class="post-title">Hello! ⭐</div>
+      <div class="post-date">2025-09-08</div>
+      <div class="post-excerpt">summary of today</div>
+      <a href="/post/first-blog-post" class="read-more">Read More →</a>
+    </div>
+    
+    
+    
+    
+    <div class="divider"></div>
+    
+    <div class="nav-back">
+      <a href="/">← Return to Homepage</a>
+    </div>
+  </div>
+</body>
+</html>

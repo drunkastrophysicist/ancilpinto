@@ -6,7 +6,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# dist/  # Commented out so Vercel can access static files
 downloads/
 eggs/
 .eggs/
