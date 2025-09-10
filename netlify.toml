@@ -1,10 +1,10 @@
 # Netlify deployment configuration for static site generated from Flask
 [build]
-  command = "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt && python3 build_static.py"
+  command = "pip3 install --upgrade pip && pip3 install -r requirements.txt && python3 build_static.py"
   publish = "dist"
 
 [build.environment]
-  PYTHON_VERSION = "3.11"
+  PYTHON_VERSION = "3.11.9"
 
 # Handle client-side routing for single page app behavior  
 [[redirects]]
